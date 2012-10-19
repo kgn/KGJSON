@@ -10,8 +10,8 @@
 
 @implementation NSString(KGJSON)
 
-+ (id)JSONObject{
-    NSData *data = [(NSString *)self dataUsingEncoding:NSUTF8StringEncoding];
+- (id)JSONObject{
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
     return [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
 }
 

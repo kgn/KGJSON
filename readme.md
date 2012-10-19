@@ -1,13 +1,4 @@
-//
-//  NSString+KGJSON.h
-//  KGJSON
-//
-//  Created by David Keegan on 10/16/12.
-//  Copyright (c) 2012 David Keegan. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-
+``` obj-c
 @interface NSString(KGJSON)
 
 - (id)JSONObject;
@@ -29,3 +20,4 @@
 - (NSString *)prettyJSONString;
 
 @end
+```
