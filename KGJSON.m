@@ -16,11 +16,17 @@
 }
 
 + (NSString *)JSONString:(id)object{
+    if(object == nil){
+        return nil;
+    }
     NSData *json = [NSJSONSerialization dataWithJSONObject:object options:0 error:nil];
     return [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
 }
 
 + (NSString *)prettyJSONString:(id)object{
+    if(object == nil){
+        return nil;
+    }
     NSData *json = [NSJSONSerialization dataWithJSONObject:object options:NSJSONWritingPrettyPrinted error:nil];
     return [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
 }
