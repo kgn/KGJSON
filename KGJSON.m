@@ -11,6 +11,9 @@
 @implementation NSString(KGJSON)
 
 - (id)JSONObject{
+    if(self == nil){
+        return self;
+    }
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
     return [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
 }
