@@ -8,6 +8,17 @@
 
 #import "KGJSON.h"
 
+@implementation NSData(KGJSON)
+
+- (id)JSONObject{
+    if(self == nil){
+        return self;
+    }
+    return [NSJSONSerialization JSONObjectWithData:self options:0 error:nil];
+}
+
+@end
+
 @implementation NSString(KGJSON)
 
 - (id)JSONObject{

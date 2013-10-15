@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@interface NSData(KGJSON)
+
+- (id)JSONObject;
+
+@end
+
 @interface NSString(KGJSON)
 
 - (id)JSONObject;
