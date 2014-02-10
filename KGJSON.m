@@ -10,7 +10,7 @@
 
 @implementation NSData(KGJSON)
 
-- (id)JSONObject{
+- (id)kg_JSONObject{
     if(self == nil){
         return self;
     }
@@ -21,7 +21,7 @@
 
 @implementation NSString(KGJSON)
 
-- (id)JSONObject{
+- (id)kg_JSONObject{
     if(self == nil){
         return self;
     }
@@ -29,7 +29,7 @@
     return [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
 }
 
-+ (NSString *)JSONString:(id)object{
++ (NSString *)kg_JSONString:(id)object{
     if(object == nil){
         return nil;
     }
@@ -37,7 +37,7 @@
     return [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
 }
 
-+ (NSString *)prettyJSONString:(id)object{
++ (NSString *)kg_prettyJSONString:(id)object{
     if(object == nil){
         return nil;
     }
@@ -49,24 +49,24 @@
 
 @implementation NSDictionary(KGJSON)
 
-- (NSString *)JSONString{
-    return [NSString JSONString:self];
+- (NSString *)kg_JSONString{
+    return [NSString kg_JSONString:self];
 }
 
-- (NSString *)prettyJSONString{
-    return [NSString prettyJSONString:self];
+- (NSString *)kg_prettyJSONString{
+    return [NSString kg_prettyJSONString:self];
 }
 
 @end
 
 @implementation NSArray(KGJSON)
 
-- (NSString *)JSONString{
-    return [NSString JSONString:self];
+- (NSString *)kg_JSONString{
+    return [NSString kg_JSONString:self];
 }
 
-- (NSString *)prettyJSONString{
-    return [NSString prettyJSONString:self];
+- (NSString *)kg_prettyJSONString{
+    return [NSString kg_prettyJSONString:self];
 }
 
 @end
