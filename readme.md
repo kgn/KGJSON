@@ -1,23 +1,23 @@
 ``` obj-c
 @interface NSString(KGJSON)
 
-- (id)JSONObject;
-+ (NSString *)JSONString:(id)object;
-+ (NSString *)prettyJSONString:(id)object;
+- (id)kg_JSONObject;
++ (NSString *)kg_JSONString:(id)object;
++ (NSString *)kg_prettyJSONString:(id)object;
 
 @end
 
 @interface NSDictionary(KGJSON)
 
-- (NSString *)JSONString;
-- (NSString *)prettyJSONString;
+- (NSString *)kg_JSONString;
+- (NSString *)kg_prettyJSONString;
 
 @end
 
 @interface NSArray(KGJSON)
 
-- (NSString *)JSONString;
-- (NSString *)prettyJSONString;
+- (NSString *)kg_JSONString;
+- (NSString *)kg_prettyJSONString;
 
 @end
 ```
